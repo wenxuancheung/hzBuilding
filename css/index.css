@@ -1,0 +1,79 @@
+/*
+ * 设置页面居中和宽度
+ */
+.w{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	background-color: rgba(0,0,0,0.5);
+}
+
+/*
+ * 菜单栏样式
+ */
+#nav li{
+	float: left;
+	margin: auto;
+	color: red;
+	cursor: pointer;
+	position: relative;
+}
+#nav li span{
+	padding: 8px;
+}
+#nav{
+    float: right;
+    line-height: 86px;
+    font-size: 16px;
+    padding: 0px 100px 0 0px;
+	
+}
+#nav li ul{
+	display: none;
+	overflow: hidden;
+	position: absolute;
+}
+#nav li ul li{
+    font-size: 14px;
+    top: -35px;
+    left: 8px;
+    height: 15px;
+    z-index: 3;
+    color: black;
+}
+
+
+
+/*
+ * 列表样式
+ */
+#contain{
+	padding: 10px;
+}
+.titleLi{
+	margin-top: 15px;
+	font: 20px bold  ;
+	color: red;
+	padding: 6px;
+	text-indent: 5em;
+}
+#container{
+	position: relative;
+	
+}
+#top5{
+	float: left;
+}
+#top5 li{
+	padding: 20px 0 20px 0;
+}
+

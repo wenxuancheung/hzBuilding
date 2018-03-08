@@ -1,0 +1,100 @@
+			/*去除内边距,没有链接下划线*/
+			*{
+				margin: 0px;
+				padding: 0px;
+				text-decoration: none;
+			}
+			 /*让body有10px的内边距更美观*/
+			body{
+				background: rgba(0,0,0,0.2);
+				padding: 10px;
+			}
+			#container{
+				width :450px;
+				height: 600px;
+				overflow: hidden;/* 隐藏多出来的图片*/
+				position: relative;/*将外部的div设置为相对定位*/
+				/*margin: 0 auto; /*水平居中*/*/
+				left: 450px;
+				float: right;
+			}
+			/*包含图片的div*/
+			#imgDiv{
+				position: absolute;
+				width: 3150px;/*计算方法：图片数乘以外部div宽度*/
+				height: 600px;
+				z-index: 1;/*设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+				
+			}
+			
+			/*所有图片浮动向左*>
+			 * 
+			 */
+			#imgDiv img{
+				float:left;
+			}
+			
+			/*小圆点div*>
+			 * 
+			 */
+			#pointsDiv{
+				position: absolute;
+				z-index: 2;/*设置得比图片高，将小圆点的整个div覆盖图片*/
+				width: 100px;
+				height: 10px;
+				bottom: 15px;
+				left: 190px;
+			}
+			/*设置小圆点的样式*/
+			#pointsDiv span{
+				/*鼠标移动到span时变成小手*/
+				cursor: pointer;
+				float: left;
+				border: 1px solid blue;
+				background-color: #333;
+				width: 10px;
+				height: 10px;
+				/*设置为圆形*/
+				border-radius: 50%;
+				margin: 1px;
+			}
+			/*
+			 * 默认的小圆点背景样式
+			 */
+		    #pointsDiv .on {
+		      background: orangered;
+		    }
+		    /*
+		     * 左右翻页超链接class
+		     */
+		    .arrow{
+		    	/*默认隐藏，当用户移动到外部div时显示左右翻页div*/
+		    	display: none;
+		    	/*变小手*/
+		    	cursor: pointer;
+		    	position: absolute;
+		    	z-index: 2;
+		    	font-size: 29px;
+		    	top: 300px;
+		    	text-align: center;
+		    	font-weight: bold;
+		    	line-height: 35px;
+		    	height: 35px;
+		    	width: 35px;
+		    	background-color: rgba(0,0,0,0.2);
+		    }
+		    
+			#prev{
+				left:17px
+			}
+			
+			#next{
+				right: 17px;
+			}
+			/*当鼠标移动到左右翻页div时,将透明颜色改深*/
+			.arrow:hover{
+				background-color: rgba(0,0,0,0.6);
+			}
+			#container:hover .arrow{
+				display: block;
+			}
